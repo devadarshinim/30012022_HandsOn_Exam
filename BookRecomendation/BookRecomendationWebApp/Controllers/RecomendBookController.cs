@@ -15,7 +15,11 @@ namespace BookRecomendationWebApp.Controllers
     //DO NOT MODIFY THE METHOD NAMES : Adding of parameters / changing the return types of the given methods may be required.
     public class RecomendBookController : Controller
     {
-
+        BookRecomendationBL blobj;
+        public RecomendBookController()
+        {
+            blobj= new BookRecomendationBL();
+        }
         // GET: RecomendBook
         public ActionResult Index()
         {
@@ -32,7 +36,7 @@ namespace BookRecomendationWebApp.Controllers
             }
         }
         [HttpPost]
-        public ActionResult(BookViewModel bookModel)
+        public ActionResult AddReviews(BookViewModel bookModel)
         {
             try
             {
@@ -40,7 +44,19 @@ namespace BookRecomendationWebApp.Controllers
                 bookDTO.isbn = bookModel.isbn;
                 bookDTO.rating = bookModel.rating;
                 bookDTO.review= bookDTO.review;
-                int result= 
+                int result= blobj.AddReviewForBook(bookDTO);
+                if(result==0)
+                {
+                    return View();
+                }
+                else
+                {
+                    return View("Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
             }
         }
 
