@@ -15,6 +15,7 @@ namespace BookRecomendationDataAccessLayer
     {
         SqlCommand command;
         SqlConnection connection;
+        BookRecomendationContext bookContext;
         public BookRecomendationDAL()
         {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Books"].ConnectionString);
@@ -46,9 +47,20 @@ namespace BookRecomendationDataAccessLayer
             }
         }
 
-        public void SaveReviewForBookToDB()
+        public List<BookDTO> SaveReviewForBookToDB()
         {
-
+            var result= bookContext.Books.ToList();
+            List<BookDTO> lstBook = new List<BookDTO>();
+            foreach(var book in result)
+            {
+                lstBook.Add(new BookDTO
+                {
+                    isbn = book.book_isbn,
+                    edition = book.book_edition,
+                });
+               
+            }
+            return lstBook;
         }
 
 }
