@@ -11,17 +11,19 @@ namespace BookReviewsAPI.Controllers
 {
     public class BookReviewsController : ApiController
     {
-        BookRecomendationBL blobj;
-        public BookReviewsController()
+        Ib ibobj;
+        public BookReviewsController() : this(new BookRecomendationBL())
+        { }
+        public BookReviewsController(Ib blobj)
         {
-            blobj = new BookRecomendationBL();
+            blobj = ibobj;
         }
         [HttpGet]
         public HttpResponseMessage GetRatingsForBook()
         {
             try
             {
-                List<BookDTO> list = blobj.ShowReviewsForBook();
+                List<BookDTO> list = ibobj.ShowReviewsForBook();
                 if (list.Count > 0)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, list);

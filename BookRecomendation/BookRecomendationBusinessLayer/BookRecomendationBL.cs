@@ -9,7 +9,7 @@ using BookRecomendationDTO;
 namespace BookRecomendationBusinessLayer
 {
     //DO NOT MODIFY THE METHOD NAMES : Adding of parameters / changing the return types of the given methods may be required. 
-    public class BookRecomendationBL
+    public class BookRecomendationBL:Ib
     {
         BookRecomendationDAL dal;
         public BookRecomendationBL()

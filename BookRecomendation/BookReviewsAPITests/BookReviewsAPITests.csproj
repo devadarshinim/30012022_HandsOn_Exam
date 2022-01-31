@@ -63,6 +63,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BookRecomendationDTO\BookRecomendationDTO.csproj">
+      <Project>{DF7AB3DE-D91A-4A5F-8D36-8E2A35D04423}</Project>
+      <Name>BookRecomendationDTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookReviewsAPI\BookReviewsAPI.csproj">
       <Project>{035871F3-A8B6-41A9-A712-B06B5FE20627}</Project>
       <Name>BookReviewsAPI</Name>
