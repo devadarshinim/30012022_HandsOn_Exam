@@ -171,3 +171,5 @@ C:\Users\40013016\Desktop\OneDrive_1_1-30-2022\HandsOn\BookRecomendation\BookRec
 C:\Users\40013016\Desktop\OneDrive_1_1-30-2022\HandsOn\BookRecomendation\BookRecomendationWebApp\obj\Debug\BookRecomendationWebApp.csproj.CopyComplete
 C:\Users\40013016\Desktop\OneDrive_1_1-30-2022\HandsOn\BookRecomendation\BookRecomendationWebApp\obj\Debug\BookRecomendationWebApp.dll
 C:\Users\40013016\Desktop\OneDrive_1_1-30-2022\HandsOn\BookRecomendation\BookRecomendationWebApp\obj\Debug\BookRecomendationWebApp.pdb
+D:\40030538\30012022_HandsOn_Exam\BookRecomendation\BookRecomendationWebApp\obj\Debug\BookRecomendationWebApp.dll
+D:\40030538\30012022_HandsOn_Exam\BookRecomendation\BookRecomendationWebApp\obj\Debug\BookRecomendationWebApp.pdb
