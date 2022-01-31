@@ -34,7 +34,10 @@ namespace BookRecomendationDataAccessLayer
                 command.Parameters.AddWithValue("@rating", dto.rating);
                 command.Parameters.AddWithValue("@review", dto.review);
                 SqlParameter retunVal = new SqlParameter();
-                retunVal.ParameterDirection=
+                retunVal.Direction = ParameterDirection.ReturnValue;
+                retunVal.SqlDbType= SqlDbType.Int;
+                command.Parameters.Add(retunVal);
+                return Convert.ToInt32(retunVal.Value);
 
             }
             catch (Exception)
@@ -45,6 +48,7 @@ namespace BookRecomendationDataAccessLayer
 
         public void SaveReviewForBookToDB()
         {
+
         }
 
 }
